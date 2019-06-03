@@ -1,1 +1,0 @@
-<?php die(); ?>{"headers":{"Vary":"Vary: Accept-Encoding, Cookie","Last-Modified":"Last-Modified: Wed, 20 Mar 2019 12:36:17 GMT","Content-Type":"Content-Type: application\/rss+xml; charset=\"UTF-8\""},"uri":"vizzuality.com\/feed\/","blog_id":1,"post":0,"key":"vizzuality.com443\/feed\/"}

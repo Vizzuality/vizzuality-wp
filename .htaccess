@@ -1,17 +1,11 @@
-# Prevent user enumeration
-
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
+
+RedirectMatch 404 /\.git
+
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
 </IfModule>
-
-
-<IfModule mod_rewrite.c>
-RewriteCond %{QUERY_STRING} ^author=([0-9]*)
-RewriteRule .* http://vizzuality.com/? [L,R=302]
-</IfModule>
-
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
